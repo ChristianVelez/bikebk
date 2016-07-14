@@ -2,13 +2,59 @@
 <html>
   <head>
     <title>Bikebk</title>
-    <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= csrf_meta_tags %>
   </head>
 
   <body>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href=""><img class="img-responsive"><%= image_tag("bike_logo4.png") %></a>
+      </div>
+      
+      <div class="navbar-collapse collapse" id="navbar-collapsible">
+        
+        <ul class="nav navbar-nav navbar-left">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Orders</a></li>
+        </ul>
+
+        <form class="navbar-form">
+          <div class="form-group navbar-right" style="display:inline;">
+            <div class="input-group">
+              <input type="text" class="form-control">
+              <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+            </div>
+          </div>  
+        </form>
+      </div>
+  </nav>
+
     <%= yield %>
+&copy; 2015 Bike Berlin
+    <footer>
+      <div class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container text-center">
+          <p class="navbar-text col-md-12 col-sm-12 col-xs-12">&copy; 2016 bike BK - Site Built By Christian Velez.</p>
+        </div>
+    </footer>
+  
   </body>
 </html>
