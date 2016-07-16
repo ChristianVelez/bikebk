@@ -76,12 +76,19 @@ html,body {
   border:none; }
 
 .wrapper {
-  padding: 0 15px;
+  padding: 70px 0 15px 0;
 }
 
 /*-----------------------------------*/
 /* - - - - - Navbar Styles - - - - - */
 /*-----------------------------------*/
+
+.navbar {
+  -webkit-box-shadow: 0px 7px 5px -6px;
+  -moz-box-shadow: 0px 7px 5px -6px;
+  box-shadow: 0px 7px 5px -6px;
+  z-index: 1;
+}
 
 .navbar-default, .navbar-collapse {
   background-color: $primary-color;
@@ -107,6 +114,12 @@ html,body {
     border-color: transparent; 
 }
 
+.navbar > .container {
+  width: auto;
+  padding-right: 10px;
+  padding-left: 8px;
+}
+
 /*-----------------------------------*/
 /* - - - - - Product Styles - - - - - */
 /*-----------------------------------*/
@@ -120,4 +133,101 @@ html,body {
 .product-heading {
   text-align: center;
   text-transform: uppercase;
+}
+
+
+@media (max-width: 979px) {
+  .wrapper {
+    padding-top: 0;
+  }
+}
+
+/*-----------------------------------*/
+/* - - - - - Intro Styles - - - - - */
+/*-----------------------------------*/
+
+.intro {
+  padding: 15px;
+  margin-top:10px;
+  border: white medium solid;
+  background-color: #f8f8f7;
+  border-radius: 10px;
+  height: 50%;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+    
+    h3 {
+      text-align: left;
+    }
+    p {
+      font-size: 1.25em;
+      font-size-adjust: .58em;
+      text-align: left;
+      line-height: 2em;
+      white-space: wrap;
+      overflow: scroll;
+      text-overflow: ellipsis;
+    }
+    
+    .right {
+      text-align: right;
+      margin-top: 10px;
+      text-transform: uppercase;
+    }    
+}
+
+
+/*-----------------------------------*/
+/* - - - - - Carousel Styles - - -  - */
+/*-----------------------------------*/
+
+#carousel {
+  padding-top: 0px;
+}
+
+.carousel-control.right, .carousel-control.left {
+  background-image:none;
+  opacity: 0;
+}
+
+.carousel-caption {
+  font-family: $font-stack;
+  font-size: 2em;
+  color: #000;
+}
+
+/*-----------------------------------*/
+/* - - - - - About Styles - - -  - */
+/*-----------------------------------*/
+
+.contact {
+  img {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .about_text h4 {
+  padding-top: 180px;
+  text-transform: uppercase;
+  text-align: left;
+  margin: 0 auto;
+  width: 100%;
+  }
+}
+
+@media (max-width: 979px) {
+  .contact {
+    .about_text h4 {
+    padding-top: 30px;
+    }
+  }
+}
+
+/*-----------------------------------*/
+/* - - - - - Footer Styles - - -  - */
+/*-----------------------------------*/
+
+footer {
+  text-transform: uppercase;
+  font-size: .6em;
 }

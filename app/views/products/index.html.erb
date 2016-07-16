@@ -1,3 +1,5 @@
+<% provide(:title, "Products") %>
+
 <p id="notice"><%= notice %></p>
 
 <h3 class="product-heading">our collection</h3>
@@ -7,15 +9,7 @@
 <div class="container">
   <div class="row text-center">
     <% @products.each do |product| %>
-      <div class=" col-sm-6 col-md-6 col-lg-4  product-listings" id="featured">
-        
-        <%= link_to image_tag(product.image_url, class: "img-responsive prod-img"), product %>
-        <p class="lead"><strong><%= product.name %></strong></p>
-        <p><%= product.description %></p>
-        <p><%= product.color %></p>
-        <p>Starting at $<%= product.price %></p>
-
-      </div><!-- /col -->
+      <%= render partial: 'shared/product', locals: { product: product } %>
     <% end %>
   </div>
 </div>

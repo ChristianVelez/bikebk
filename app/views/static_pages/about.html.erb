@@ -1,2 +1,14 @@
-<h1>StaticPages#about</h1>
-<p>Find me in app/views/static_pages/about.html.erb</p>
+<% provide(:title, "About") %>
+<div class="container contact">
+  <div class="row">
+    <div class="col-sm-5">
+      <%= image_tag(image_url "wheel.png", class: "img-responsive") %>
+    </div>
+
+    <div class="col-sm-7 about_text">
+      <h4>It All Began With One Question</h4><br>
+        <p> Why it is so hard to find a great bike at a reasonable price?</p>
+        <p>Somewhere along the line, bicycles became complicated. Speed and spandex overshadowed fun and prices skyrocketed. But bicycles shouldn't be expensive or intimidating, so we set out to bring the magic and lightheartedness of your childhood back to bicycling.</p>
+    </div>
+  </div>
+</div>
