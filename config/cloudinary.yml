@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: fortunateonly
+  api_key: '722828229389198'
+  api_secret: u9LFKwUEdNlnFGE91ncIbKkDYyQ
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: fortunateonly
+  api_key: '722828229389198'
+  api_secret: u9LFKwUEdNlnFGE91ncIbKkDYyQ
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: fortunateonly
+  api_key: '722828229389198'
+  api_secret: u9LFKwUEdNlnFGE91ncIbKkDYyQ
+  enhance_image_tag: true
+  static_image_support: false

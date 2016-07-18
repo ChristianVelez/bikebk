@@ -1,4 +1,7 @@
 <% provide(:title, "Contact Us") %>
+<%= flash[:notice] %>
+
+<%= form_tag("/static_pages/thank_you") do %>
 
 <div class="container contact">
   <div class="row text-center">
@@ -41,3 +44,5 @@
     </div>
   </div>
 </div>
+
+<% end %>
