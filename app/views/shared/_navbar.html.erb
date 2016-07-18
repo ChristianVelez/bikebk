@@ -18,15 +18,19 @@
           <li><%= link_to 'Products', products_path %></li>
           <li><a href="#">Orders</a></li>
          </ul>
-
-        <form class="navbar-form">
-          <div class="form-group navbar-right" style="display:inline;">
-            <div class="input-group">
-              <input type="text" class="form-control">
-              <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
-            </div>
-          </div>  
-        </form>
+        
+      
+        <%= form_tag("/products", method:"GET", class: "navbar-form") do %>
+        <div class="input-group navbar-right">
+          <%= label_tag(:q, "Search for:", class: "hidden") %>
+          <%= text_field_tag(:q, "", placeholder: "Search", class: "form-control ") %>
+            <span class="input-group-btn">
+                <%= button_tag name: nil, class: "btn btn-default", type: "submit" do %>
+                <span class="glyphicon glyphicon-search"></span>
+                <% end %>
+            </span>
+        </div>
+        <% end %>
       </div>
    </div>
   </nav>

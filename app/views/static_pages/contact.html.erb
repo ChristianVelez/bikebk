@@ -1,3 +1,43 @@
 <% provide(:title, "Contact Us") %>
-<h1>StaticPages#contact</h1>
-<p>Find me in app/views/static_pages/contact.html.erb</p>
+
+<div class="container contact">
+  <div class="row text-center">
+    <div class="col-md-8 con_form">
+      <form>
+        <div class="form-row form-title-row">
+            <span class="form-title"><h3>Drop us a line!</h3></span>
+        </div>
+              <hr>
+        <fieldset class="form-group">
+
+          <%= text_field_tag :name, nil, class: "form-control", placeholder: "Name" %>
+        </fieldset>
+
+        <fieldset class="form-group">
+
+          <%= text_field_tag :email, nil, class: "form-control", placeholder: "Email" %>
+        </fieldset>
+
+        <fieldset class="form-group">
+
+          <%= text_area_tag :message, nil, class: "form-control", rows: 6, placeholder: "Message" %>
+        </fieldset>
+
+    <%= submit_tag "Send", class: "btn btn-default" %>
+
+     </form>
+    </div>
+
+    <div class="col-md-4">
+      <div class="form-sign-in-with-social">
+        <div class="form-row form-title-row">
+            <span class="form-title">Find us on</span>
+        </div>
+           <a href="#" class="form-google-button">Google</a>
+           <a href="#" class="form-facebook-button">Facebook</a>
+           <a href="#" class="form-twitter-button">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

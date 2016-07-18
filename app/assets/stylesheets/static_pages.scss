@@ -135,13 +135,6 @@ html,body {
   text-transform: uppercase;
 }
 
-
-@media (max-width: 979px) {
-  .wrapper {
-    padding-top: 0;
-  }
-}
-
 /*-----------------------------------*/
 /* - - - - - Intro Styles - - - - - */
 /*-----------------------------------*/
@@ -231,3 +224,134 @@ footer {
   text-transform: uppercase;
   font-size: .6em;
 }
+
+/*-----------------------------------*/
+/* - - - - Contact Form Styles - - - */
+/*-----------------------------------*/
+
+.form-sign-in-with-social{
+    display: inline-block;
+    max-width: 180px;
+    box-sizing: border-box;
+    vertical-align: top;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.form-sign-in-with-social .form-title-row{
+    margin-bottom: 50px;
+}
+
+.form-sign-in-with-social .form-title{
+    box-sizing: border-box;
+    color:  #4c565e;
+    font-size: 24px;
+    padding: 15px 20px;
+    border-bottom: 2px solid #6caee0;
+}
+
+.form-sign-in-with-social .form-google-button{
+    color:  #ffffff;
+    display: block;
+    width: 145px;
+    height: 40px;
+    font-size: 12px;
+    line-height: 40px;
+    background-color:  rgba(222, 110, 60, 0.9);
+    box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 2px;
+    margin: 8px auto;
+    text-decoration: none;
+}
+
+.form-sign-in-with-social .form-facebook-button{
+    color:  #ffffff;
+    display: block;
+    width: 145px;
+    height: 40px;
+    font-size: 12px;
+    line-height: 40px;
+    background-color:  rgba(75, 136, 194, 0.9);
+    box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 2px;
+    margin: 8px auto;
+    text-decoration: none;
+}
+
+.form-sign-in-with-social .form-twitter-button{
+    color:  #ffffff;
+    display: block;
+    width: 145px;
+    height: 40px;
+    font-size: 12px;
+    line-height: 40px;
+    background-color:  rgba(123, 195, 226, 0.9);
+    box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 2px;
+    margin: 8px auto;
+    text-decoration: none;
+}
+
+
+.contact {
+  border: white medium solid;
+  background-color: #f8f8f7;
+  border-radius: 10px;
+  height: 450px;
+  padding-bottom: 40px;
+  padding-top: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 80%;
+
+  h3 {
+      text-transform: uppercase;
+      }
+
+      .button {
+        border: 2px solid #0099cc;
+        color: #0099cc;
+
+      }
+}
+
+
+
+/*-----------------------------------*/
+/* - - - - - Media Queries - - - - - */
+/*-----------------------------------*/
+
+/* Custom, iPhone Retina */ 
+    @media only screen and (min-width : 320px) {
+       .wrapper {
+        padding-top: 45px;
+      }
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 479px) {
+        .wrapper {
+        padding-top: 60px;
+      }
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 769px) {
+        .wrapper {
+        padding-top: 60px;
+      }
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+        .wrapper {
+        padding-top: 60px;
+      }
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1199px) {
+        .wrapper {
+        padding-top: 60px;
+      }
+    }
