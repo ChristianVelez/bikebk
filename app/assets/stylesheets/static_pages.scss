@@ -124,6 +124,10 @@ html,body {
 /* - - - - - Product Styles - - - - - */
 /*-----------------------------------*/
 
+.show-img {
+  border-radius: 25px;
+}
+
 .prod-img {
   border-radius: 25px;
   padding: 15px;
@@ -133,6 +137,10 @@ html,body {
 .product-heading {
   text-align: center;
   text-transform: uppercase;
+}
+
+.top {
+  padding-top: 60px;
 }
 
 /*-----------------------------------*/
@@ -315,7 +323,13 @@ footer {
       }
 }
 
+/*-----------------------------------*/
+/* - - - - General Form Styles - - - */
+/*-----------------------------------*/
 
+.top {
+  padding-top: 60px;
+}
 
 /*-----------------------------------*/
 /* - - - - - Media Queries - - - - - */
