@@ -17,9 +17,14 @@
   </head>
 
   <body>
+     <% if alert %>
+      <div class="alert alert-danger alert-dismissible fade in" role="alert"> <%= alert %> </div>
+      <% end %>
+      <% if notice %>
+      <div class="alert alert-info alert-dismissible fade in" id="notice" role="alert"> <%= notice %> </div>
+     <% end %>
+
     <%= render 'shared/navbar' %>
-    <!--  <p class="notice"><%#= notice %></p>
-          <p class="alert"><%#= alert %></p> -->
 
     <div class="wrapper">
       <%= yield %>
