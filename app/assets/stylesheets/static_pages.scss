@@ -201,7 +201,18 @@ html,body {
 /* - - - - - About Styles - - -  - */
 /*-----------------------------------*/
 
-.contact {
+.about {
+  border: white medium solid;
+  background-color: #f8f8f7;
+  border-radius: 10px;
+  height: 450px;
+  padding-bottom: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 80%;
+}
+
+.about {
   img {
     width: 100%;
     margin: 0 auto;
@@ -216,11 +227,19 @@ html,body {
   }
 }
 
+
 @media (max-width: 979px) {
-  .contact {
+  .about {
     .about_text h4 {
     padding-top: 30px;
     }
+  }
+}
+
+@media (max-width: 979px) {
+  .about_image {
+    
+    display: none;
   }
 }
 
@@ -305,7 +324,7 @@ footer {
   border: white medium solid;
   background-color: #f8f8f7;
   border-radius: 10px;
-  height: 450px;
+  min-height: 450px;
   padding-bottom: 40px;
   padding-top: 30px;
   margin-right: auto;
@@ -377,4 +396,24 @@ footer {
 .alert {
   z-index: 2;
   margin-bottom: 0;
+}
+
+
+.review1 {
+  p, h3 {
+    padding-left: 15px;
+  }
+}
+
+.review {
+  padding-left: 15px;
+  padding-top: 75px;
+}
+
+.rated {
+  padding-left: 15px;
+}
+
+.first {
+  padding-left: 0px;
 }
