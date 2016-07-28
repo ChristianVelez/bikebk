@@ -9,4 +9,4 @@
     <% end %>
 </div>
 
-<%= will_paginate @comments, :page_links => false %>
+<%= will_paginate @comments, renderer: BootstrapPagination::Rails, :page_links => false %>
