@@ -1,8 +1,11 @@
 class UserMailer < ApplicationMailer
-  default from: "from@example.com"
+  default from: "support@bikeblackrock.com"
 
   def contact_form(email, name, message)
   @message = message
+  attachments.inline['bike_logo4.svg'] = File.read("#{Rails.root}/app/assets/images/bike_logo4.svg")
+  attachments.inline['facebook.svg'] = File.read("#{Rails.root}/app/assets/images/facebook.svg")
+  attachments.inline['twitter.svg'] = File.read("#{Rails.root}/app/assets/images/twitter.svg")
     mail(:from => email,
          :to => 'christian.velez1@gmail.com',
          :subject => "A new contact form message from #{name}")
@@ -17,6 +20,9 @@ class UserMailer < ApplicationMailer
 
   def welcome(user)
   @appname = "bike BK"
+  attachments.inline['bike_logo4.svg'] = File.read("#{Rails.root}/app/assets/images/bike_logo4.svg")
+  attachments.inline['facebook.svg'] = File.read("#{Rails.root}/app/assets/images/facebook.svg")
+  attachments.inline['twitter.svg'] = File.read("#{Rails.root}/app/assets/images/twitter.svg")
   mail( :to => user.email,
         :subject => "Welcome to #{@appname}!")
   end
