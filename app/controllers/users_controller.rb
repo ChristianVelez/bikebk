@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
   # GET /users
@@ -9,7 +10,8 @@ class UsersController < ApplicationController
 
   # GET /users/1
   # GET /users/1.json
-  def show
+  def show 
+    redirect_to root_path if current_user.id != params[:id].to_i
   end
 
   # GET /users/new
@@ -64,7 +66,7 @@ class UsersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
-      @user = User.find(params[:id])
+      @user = current_user || User.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
