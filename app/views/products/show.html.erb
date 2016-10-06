@@ -30,9 +30,11 @@
 </p>
 
 <p>
-  <%= form_tag "/payments/create" do %>
-    <%= render partial: "shared/stripe_checkout_button" %>
-  <% end %>
+  <div class="stripe">
+    <%= form_tag "/payments/create" do %>
+      <%= render partial: "shared/stripe_checkout_button" %>
+    <% end %>
+  </div>
 </p>
 
 </div>
