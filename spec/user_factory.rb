@@ -12,11 +12,11 @@ FactoryGirl.define do
   end
 
   factory :admin, class: User do
-  email 
-  password "hellothere"
-  admin true
-  first_name "Admin"
-  last_name "User"
-end
+    email 
+    password "hellothere"
+    admin true
+    first_name "Admin"
+    last_name "User"
+  end
 
 end
