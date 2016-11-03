@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+before_filter :authenticate_user!
 
   def create
     @product = Product.find(params[:product_id])
@@ -20,6 +21,22 @@ class CommentsController < ApplicationController
     product = @comment.product
     @comment.destroy
     redirect_to product
+  end
+
+  def update
+    respond_to do |format|
+      if @comment.update(comment_params)
+        format.html { redirect_to @comment, notice: 'Review was successfully updated.' }
+        format.json { render :show, status: :ok, location: @comment }
+      else
+        format.html { render :edit }
+        format.json { render json: @comment.errors, status: :unprocessable_entity }
+      end
+    end
+
+    def edit
+    end
+
   end
   
   private

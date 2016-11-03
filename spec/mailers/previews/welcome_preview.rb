@@ -1,5 +1,5 @@
 class UserMailerPreview < ActionMailer::Preview
   def welcome
-    UserMailer.welcome("Chris")
+    UserMailer.welcome(User.last)
   end
 end

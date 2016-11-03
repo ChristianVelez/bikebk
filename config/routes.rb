@@ -5,7 +5,11 @@ Rails.application.routes.draw do
   resources :products do
     resources :comments
   end
+
+  
   resources :orders, only: [:index, :show, :create, :destroy]
+
+  resources :payments
   
   get 'static_pages/about'
 
@@ -20,6 +24,14 @@ Rails.application.routes.draw do
   get 'orders/index'
 
   get 'users/new'
+
+  get 'products/new'
+
+  get '/products/:id/edit' => 'products#edit'
+
+  post 'payments/create'
+
+  get 'comments/edit'
 
   #get 'products/:id' => 'products#show'#
 
