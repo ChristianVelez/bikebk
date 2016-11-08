@@ -5,6 +5,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
+    #byebug
     if Rails.env.development?
       if params[:q]
         search_term = params[:q]
@@ -27,6 +28,7 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     #@product = Product.find(params[:id])#
+    #byebug
     @comments = @product.comments.order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
   end
 
@@ -43,12 +45,16 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
+    #byebug
     @product = Product.new(product_params)
-
+    #logger commented out in favor of byebug
+    #logger.debug {"New product: #{@product.attributes.inspect}"}
+    #logger.debug {"Product should be valid #{@product.valid?}"}
     respond_to do |format|
       if @product.save
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
         format.json { render :show, status: :created, location: @product }
+        #logger.debug "The product was saved and the user will be redirected"
       else
         format.html { render :new }
         format.json { render json: @product.errors, status: :unprocessable_entity }

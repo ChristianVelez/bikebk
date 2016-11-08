@@ -5,12 +5,14 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
+    #byebug
     @users = User.all
   end
 
   # GET /users/1
   # GET /users/1.json
   def show 
+    #logger.debug {"Redirect to landing page if there is a conflict"}
     redirect_to root_path if current_user.id != params[:id].to_i
   end
 
@@ -27,7 +29,8 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
-
+    #logger.debug {"New user: #{@user.attributes.inspect}"}
+    #logger.debug {"User should be valid #{@user.valid?}"}
     respond_to do |format|
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }
