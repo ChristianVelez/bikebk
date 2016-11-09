@@ -61,6 +61,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'rails_real_favicon'
+  gem 'brakeman', '~> 3.4', '>= 3.4.1'
 end
 
 group :production do

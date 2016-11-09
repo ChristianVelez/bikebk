@@ -34,7 +34,7 @@
                   </li>
                   <li>
                     <% if current_user && current_user.admin? %>
-                    <%= link_to('Edit Product', params[:product_id]) %>
+                    <%= link_to('Edit Product', edit_product_path) %>
                     <% end %>
                   </li>
                 <li class="divider"></li>
@@ -56,3 +56,6 @@
       </div>
    </div>
   </nav>
+
+  <!--#params[:product_id]-->
+
