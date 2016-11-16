@@ -10,8 +10,10 @@
 <div class="container">
   <div class="row text-center">
     <% @products.each do |product| %>
-      <%= render partial: 'shared/product', locals: { product: product } %>
-    <% end %>
+      <% cache(cache_key_for_products) do %>
+       <%= render partial: 'shared/product', locals: { product: product } %>
+      <% end %>
+    <% end %>  
   </div>
 </div>
 

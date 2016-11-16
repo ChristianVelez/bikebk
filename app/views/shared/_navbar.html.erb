@@ -32,11 +32,6 @@
                     <%= link_to('Add Product', new_product_path) %>
                     <% end %>
                   </li>
-                  <li>
-                    <% if current_user && current_user.admin? %>
-                    <%= link_to('Edit Product', edit_product_path) %>
-                    <% end %>
-                  </li>
                 <li class="divider"></li>
             </ul>
           </li>
