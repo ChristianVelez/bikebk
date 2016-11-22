@@ -33,6 +33,8 @@ Rails.application.routes.draw do
 
   get 'comments/edit'
 
+  mount ActionCable.server => '/cable'
+
   #get 'products/:id' => 'products#show'#
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
