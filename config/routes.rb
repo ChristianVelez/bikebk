@@ -6,11 +6,12 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  
   resources :orders, only: [:index, :show, :create, :destroy]
 
   resources :payments
   
+  mount ActionCable.server => '/cable'
+
   get 'static_pages/about'
 
   get 'static_pages/contact'
@@ -32,8 +33,6 @@ Rails.application.routes.draw do
   post 'payments/create'
 
   get 'comments/edit'
-
-  mount ActionCable.server => '/cable'
 
   #get 'products/:id' => 'products#show'#
 

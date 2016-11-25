@@ -42,6 +42,7 @@
 <%= render 'new_comment' %>
 
 <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+
 <%= render 'comments' %>
 <% if current_user && current_user.admin? %>
 <%= link_to 'Edit Comments', edit_product_comment_path(@product. comments) %>
