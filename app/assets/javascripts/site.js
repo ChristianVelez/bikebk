@@ -1,3 +1,9 @@
+$(document).on('turbolinks:load ajaxSuccess', function(){
+    refreshRating();
+    
+    $('.img-zoom').elevateZoom();
+});
+
 var refreshRating = function() {
     $('.rating').raty( { path: '/assets', scoreName: 'comment[rating]' });
     $('.rated').raty({ path: '/assets',
@@ -8,8 +14,3 @@ var refreshRating = function() {
     });
 };
 
-$(document).on('turbolinks:load ajaxSuccess', function(){
-    refreshRating();
-    
-    $('.img-zoom').elevateZoom();
-});
