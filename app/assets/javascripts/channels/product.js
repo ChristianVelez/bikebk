@@ -9,19 +9,18 @@ App.product = App.cable.subscriptions.create("ProductChannel", {
 
   received: function(data) {
     // Called when there's incoming data on the websocket for this channel
-    
-    //$('#new_comment').html("Yesss!");
-    //$(".alert.alert-info").show();
-    //$('.product-reviews').prepend(data.comment);
-    //$("#average-rating").attr('data-score', data.average_rating);
+    $(".alert.alert-info").fadeIn(3000).delay(1000).fadeOut("slow");
+    $('.product-reviews').prepend(data.comment);
+    $("#average-rating").attr('data-score', data.average_rating);
     refreshRating();
   },
 
-  listen_to_comments: function() {
+  listen_to_comments: function(){
     return this.perform('listen', {
       product_id: $("[data-product-id]").data("product-id")
     });
-  }
+  },
+
 
 });
 

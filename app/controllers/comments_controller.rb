@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-before_filter :authenticate_user!
+before_action :authenticate_user!
 
   def create
     @product = Product.find(params[:product_id])
@@ -7,9 +7,7 @@ before_filter :authenticate_user!
     @comment.user = current_user
     respond_to do |format|
       if @comment.save
-        #ActionCable.server.broadcast 'product_channel', comment: @comment, average_rating: @comment.product.average_rating
-        #ProductChannel.broadcast_to @product.id, comment: @comment.body, average_rating: @product.average_rating
-        ProductChannel.broadcast_to @comment.product.id, comment: @comment, average_rating: @comment.product.average_rating
+        #ProductChannel.broadcast_to @product.id, comment: CommentsController.render(partial: 'comments/comment', locals: {comment: @comment, current_user: current_user}), average_rating: @product.average_rating
         format.html { redirect_to @product, notice: 'Review was created successfully.' }
         format.json { render :show, status: :created, location: @product }
         format.js
